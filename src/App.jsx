@@ -1,6 +1,6 @@
-import { use, useState } from 'react'
+import { useState } from 'react'
 import Input from './components/Input'
-import codeParser from './codeParser'
+import inputParser from './inputParser'
 import './App.css'
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
   const [input, setInput] = useState("")
   console.log(input)
 
-  const codeArray = codeParser(input);
+  const codeArray = inputParser(input)
 
   console.log(codeArray)
 
