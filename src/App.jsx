@@ -1,8 +1,7 @@
 import { useState } from 'react'
-import Input from './components/Input'
+import Form from './components/Form'
 import QRgrid from './components/QRgrid'
 import inputParser from './inputParser'
-
 import './App.css'
 
 function App() {
@@ -10,14 +9,16 @@ function App() {
   const [input, setInput] = useState("")
   const [codeArray, setCodeArray] = useState([])
 
-  const generateQR = () => setCodeArray(inputParser(input))
+  const generateQR = (e) => {
+    e.preventDefault()
+    setCodeArray(inputParser(input))
+  }
 
   console.log(codeArray)
 
   return (
     <>
-      <Input input={input} setInput={setInput}/>
-      <button onClick={generateQR}>Generate</button>
+      <Form input={input} setInput={setInput} generateQR={generateQR} />
       <QRgrid codeArray={codeArray} />
     </>
   )
