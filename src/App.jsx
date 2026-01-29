@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import Input from './components/Input'
 import inputParser from './inputParser'
+import {QRCodeSVG} from 'qrcode.react';
+
 import './App.css'
 
 function App() {
