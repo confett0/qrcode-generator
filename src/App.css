@@ -6,9 +6,19 @@
   display: flex;
   max-width: 1280px;
   margin: 0 auto;
-  gap: 2rem;
+  gap: 4rem;
   padding: 2rem;
   text-align: center;
+}
+
+form {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+textarea {
+  min-height: 15rem;
 }
 
 .qr-grid {

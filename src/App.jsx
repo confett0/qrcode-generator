@@ -14,8 +14,6 @@ function App() {
     setCodeArray(inputParser(input))
   }
 
-  console.log(codeArray)
-
   return (
     <>
       <Form input={input} setInput={setInput} generateQR={generateQR} />
