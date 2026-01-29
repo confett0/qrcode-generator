@@ -1,11 +1,20 @@
-import { useState } from 'react'
+import { use, useState } from 'react'
+import Input from './components/Input'
+import codeParser from './codeParser'
 import './App.css'
 
 function App() {
 
+  const [input, setInput] = useState("")
+  console.log(input)
+
+  const codeArray = codeParser(input);
+
+  console.log(codeArray)
+
   return (
     <>
-      <h1>Hello world</h1>
+      <Input input={input} setInput={setInput}/>
     </>
   )
 }
