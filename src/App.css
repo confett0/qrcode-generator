@@ -39,3 +39,8 @@ textarea {
   height: 40mm;
   width: 28mm;
 }
+
+.qr-code-card svg {
+  width: 100%;
+  height: auto;
+}
