@@ -54,6 +54,12 @@ textarea {
     margin: 0.2rem;
 }
 
+@media (max-width: 768px) {
+  #root {
+    flex-direction: column;
+  }
+}
+
 @media print {
   .sidebar {
     display: none;
