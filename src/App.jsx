@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Form from './components/Form'
+import Sidebar from './components/Sidebar'
 import QRgrid from './components/QRgrid'
 import inputParser from './inputParser'
 import './App.css'
@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      <Form input={input} setInput={setInput} generateQR={generateQR} />
+      <Sidebar input={input} setInput={setInput} generateQR={generateQR} codeArray={codeArray} />
       <QRgrid codeArray={codeArray} />
     </>
   )
