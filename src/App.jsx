@@ -14,9 +14,14 @@ function App() {
     setCodeArray(inputParser(input))
   }
 
+  const resetAll = () => {
+    setInput("")
+    setCodeArray([])
+  }
+
   return (
     <>
-      <Sidebar input={input} setInput={setInput} generateQR={generateQR} codeArray={codeArray} />
+      <Sidebar input={input} setInput={setInput} generateQR={generateQR} codeArray={codeArray} resetAll={resetAll} />
       <QRgrid codeArray={codeArray} />
     </>
   )

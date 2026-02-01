@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -21,7 +23,10 @@ textarea {
   min-height: 15rem;
 }
 
-.print-button {
+.control-button-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
   margin-top: 2rem;
 }
 
@@ -51,7 +56,7 @@ textarea {
 }
 
 .qr-code-card p {
-    margin: 0.2rem;
+  margin: 0.2rem;
 }
 
 @media (max-width: 768px) {
