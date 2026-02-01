@@ -23,9 +23,16 @@ textarea {
   min-height: 15rem;
 }
 
+
+button {
+    justify-content: center;
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
 .control-button-container {
   display: flex;
-  gap: 2rem;
   justify-content: space-between;
   margin-top: 2rem;
 }
