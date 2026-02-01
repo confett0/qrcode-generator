@@ -5,12 +5,19 @@
 }
 
 #root {
-  display: flex;
   max-width: 1280px;
   margin: 0 auto;
+  text-align: center;
+}
+
+.content {
+  display: flex;
   gap: 4rem;
   padding: 2rem;
-  text-align: center;
+}
+
+.sidebar {
+  max-width: 300px;
 }
 
 form {
@@ -66,14 +73,27 @@ button {
   margin: 0.2rem;
 }
 
+footer {
+  font-size: 0.75rem;
+  padding: 1rem 0 0.5rem;
+}
+
+footer a {
+  color: #ccc;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
 @media (max-width: 768px) {
-  #root {
+  .content {
     flex-direction: column;
   }
 }
 
 @media print {
-  .sidebar {
+  .sidebar, footer {
     display: none;
   }
 
