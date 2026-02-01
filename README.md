@@ -2,6 +2,8 @@
 
 A small web app to generate **multiple QR codes** from a list of alphanumeric codes and automatically **lay them out on an A4 sheet** (7 columns), ready for printing or PDF export.
 
+[Live demo](qr-code-printer.netlify.app)
+
 ---
 
 ## 🇬🇧 English
