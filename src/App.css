@@ -5,6 +5,9 @@
 }
 
 #root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   max-width: 1280px;
   margin: 0 auto;
   text-align: center;
@@ -50,9 +53,9 @@ button {
   display: grid;
   grid-template-columns: repeat(7, 25mm);
   grid-auto-rows: 35mm;
-  width: 210mm;
-  height: 297mm;
   padding: 10mm;
+  max-width: 100%;
+  overflow-x: auto;
 }
 
 .qr-code-card {
@@ -90,15 +93,26 @@ footer a:hover {
   .content {
     flex-direction: column;
   }
+
+  .sidebar {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 @media print {
-  .sidebar, footer {
-    display: none;
-  }
 
   #root {
     padding: 0;
     gap: 0;
+  }
+
+  .qr-grid {
+    width: 210mm;
+    height: 297mm;
+  }
+
+  .sidebar, footer {
+    display: none;
   }
 }
