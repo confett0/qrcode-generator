@@ -7,16 +7,20 @@
 #root {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-  max-width: 1280px;
   margin: 0 auto;
+  padding: 0 2rem;
   text-align: center;
+  width: 100%;
+  min-height: 100%;
 }
 
 .content {
   display: flex;
   gap: 4rem;
   padding: 2rem;
+  width: min(1280px, 100%);
 }
 
 .sidebar {
@@ -35,10 +39,10 @@ textarea {
 
 
 button {
-    justify-content: center;
-    gap: 0.5rem;
-    display: flex;
-    align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
 }
 
 .control-button-container {
@@ -48,23 +52,22 @@ button {
 }
 
 .qr-grid {
+  align-content: start;
   background-color: #fff;
   color: #000;
   display: grid;
-  grid-template-columns: repeat(7, 25mm);
-  grid-auto-rows: 35mm;
-  padding: 10mm;
-  max-width: 100%;
-  overflow-x: auto;
+  gap: 0;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 1rem;
+  width: 100%;
 }
 
 .qr-code-card {
   border: 2px solid #000;
   font-size: 11px;
   font-weight: bold;
-  padding: 2mm;
-  height: 35mm;
-  width: 25mm;
+  padding: 0.5rem;
+  aspect-ratio: 5 / 7;
 }
 
 .qr-code-card svg {
@@ -98,6 +101,20 @@ footer a:hover {
     width: 100%;
     max-width: 100%;
   }
+
+  form {
+    align-items: center;
+  }
+
+  textarea {
+    min-height: 25rem;
+    width: min(400px, 90vw);
+  }
+
+  .control-button-container {
+    justify-content: center;
+    gap: 2.5rem;
+  }
 }
 
 @media print {
@@ -108,11 +125,23 @@ footer a:hover {
   }
 
   .qr-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 25mm);
+    grid-auto-rows: 35mm;
     width: 210mm;
     height: 297mm;
+    padding: 10mm;
   }
 
-  .sidebar, footer {
+  .qr-code-card {
+    width: 25mm;
+    height: 35mm;
+    padding: 2mm;
+  }
+
+
+  .sidebar,
+  footer {
     display: none;
   }
 }
