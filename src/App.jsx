@@ -9,7 +9,7 @@ function App() {
 
   const [input, setInput] = useState("")
   const [codeArray, setCodeArray] = useState([])
-  const [qrSize, setQrSize] = useState(20) // mm
+  const [qrSize, setQrSize] = useState(25) // mm
 
   const generateQR = (e) => {
     e.preventDefault()
@@ -24,8 +24,8 @@ function App() {
   return (
     <>
       <div className='content'>
-        <Sidebar input={input} setInput={setInput} generateQR={generateQR} codeArray={codeArray} resetAll={resetAll} />
-        <QRgrid codeArray={codeArray} />
+        <Sidebar input={input} setInput={setInput} generateQR={generateQR} codeArray={codeArray} resetAll={resetAll} qrSize={qrSize} setQrSize={setQrSize} />
+        <QRgrid codeArray={codeArray} qrSize={qrSize} />
       </div>
       <Footer />
     </>
