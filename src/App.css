@@ -37,6 +37,10 @@ textarea {
   min-height: 15rem;
 }
 
+fieldset {
+  border: none;
+}
+
 
 button {
   justify-content: center;
@@ -129,13 +133,14 @@ footer a:hover {
     grid-template-columns: repeat(auto-fill, var(--qr-size));
     grid-auto-rows: calc(var(--qr-size) * 7/5);
     width: 210mm;
-    padding: 10mm;
+    align-content: start;
   }
 
   .qr-code-card {
     width: var(--qr-size);
     aspect-ratio: 5/7;
     padding: 2mm;
+    break-inside: avoid;
   }
 
 
