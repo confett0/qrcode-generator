@@ -9,6 +9,7 @@ function App() {
 
   const [input, setInput] = useState("")
   const [codeArray, setCodeArray] = useState([])
+  const [qrSize, setQrSize] = useState(20) // mm
 
   const generateQR = (e) => {
     e.preventDefault()

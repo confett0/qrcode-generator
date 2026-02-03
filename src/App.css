@@ -126,16 +126,15 @@ footer a:hover {
 
   .qr-grid {
     display: grid;
-    grid-template-columns: repeat(7, 25mm);
-    grid-auto-rows: 35mm;
+    grid-template-columns: repeat(auto-fill, var(--qr-size));
+    grid-auto-rows: calc(var(--qr-size) * 7/5);
     width: 210mm;
-    height: 297mm;
     padding: 10mm;
   }
 
   .qr-code-card {
-    width: 25mm;
-    height: 35mm;
+    width: var(--qr-size);
+    aspect-ratio: 5/7;
     padding: 2mm;
   }
 
