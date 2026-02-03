@@ -61,7 +61,7 @@ button {
   color: #000;
   display: grid;
   gap: 0;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(var(--column-num), 1fr);
   padding: 1rem;
   width: 100%;
 }
@@ -72,6 +72,7 @@ button {
   font-weight: bold;
   padding: 0.5rem;
   aspect-ratio: 5 / 7;
+  max-width: 100%;
 }
 
 .qr-code-card svg {
@@ -81,6 +82,7 @@ button {
 
 .qr-code-card p {
   margin: 0.2rem;
+  word-break: break-all;
 }
 
 footer {
@@ -123,6 +125,11 @@ footer a:hover {
 
 @media print {
 
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+
   #root {
     padding: 0;
     gap: 0;
@@ -132,7 +139,6 @@ footer a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fill, var(--qr-size));
     grid-auto-rows: calc(var(--qr-size) * 7/5);
-    width: 210mm;
     align-content: start;
   }
 
