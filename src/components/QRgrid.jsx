@@ -2,7 +2,7 @@ import QRCodeCard from "./QRCodeCard";
 
 export default function QRgrid({ codeArray, qrSize }) {
   const printWidth = 210; // mm
-  const printMargin = 10;
+  const printMargin = 15;
   // calculate number of columns for screen preview
   const columnNum =
     qrSize === 40 ? 3 : Math.floor((printWidth - printMargin * 2) / qrSize);

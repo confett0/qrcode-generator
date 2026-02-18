@@ -4,7 +4,9 @@ export default function QRCodeCard({ code }) {
   return (
     <div className="qr-code-card">
       <QRCodeSVG value={code} level="Q" width="100%" height="100%" />
-      <p>{code}</p>
+      <div className="card-text">
+        <p>{code}</p>
+      </div>
     </div>
   );
 }

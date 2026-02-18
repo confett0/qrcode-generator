@@ -67,7 +67,10 @@ button {
 
 .qr-code-card {
   border: 2px solid #000;
+  display: flex;
+  flex-direction: column;
   font-weight: bold;
+  gap: 0.1rem;
   padding: 0.6rem;
   aspect-ratio: 5 / 7;
   max-width: 100%;
@@ -78,9 +81,15 @@ button {
   height: auto;
 }
 
+.card-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .qr-code-card p {
   font-size: clamp(11px, calc(var(--qr-size) * 0.12), 16px);
-  margin: 0.2rem 0.1rem 0.1rem;
+  margin: 0;
   word-break: break-all;
 }
 
@@ -138,7 +147,7 @@ footer a:hover {
     grid-template-columns: repeat(auto-fill, var(--qr-size));
     grid-auto-rows: calc(var(--qr-size) * 7 / 5);
     align-content: start;
-    margin: auto;
+    margin: 0 auto;
   }
 
   .qr-code-card {
