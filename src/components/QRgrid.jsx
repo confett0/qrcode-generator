@@ -12,15 +12,18 @@ export default function QRgrid({ codeArray, qrSize }) {
   ));
 
   return (
-    <div
-      className="qr-grid"
-      style={{
-        "--qr-size": `${qrSize}mm`,
-        "--column-num": columnNum,
-        gap: gap,
-      }}
-    >
-      {qrCodeElements}
+    <div className="grid-wrap">
+      <h1>Un gran bel titolo</h1>
+      <div
+        className="qr-grid"
+        style={{
+          "--qr-size": `${qrSize}mm`,
+          "--column-num": columnNum,
+          gap: gap,
+        }}
+      >
+        {qrCodeElements}
+      </div>
     </div>
   );
 }

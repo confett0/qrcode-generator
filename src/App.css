@@ -13,7 +13,7 @@
   padding: 0 2rem;
   text-align: center;
   width: 100vw;
-  min-height: 100wh;
+  min-height: 100vh;
 }
 
 .content {
@@ -55,17 +55,23 @@ button {
   margin-top: 2rem;
 }
 
-.qr-grid {
-  align-content: start;
+.grid-wrap {
   background-color: #fff;
   color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  width: 800px;
+}
+
+.qr-grid {
+  align-content: start;
   display: grid;
   gap: 0;
   grid-template-columns: repeat(var(--column-num), 1fr);
   justify-content: center;
-  padding: 1rem;
-  width: 800px;
-  max-width: 800px;
 }
 
 .qr-code-card {
@@ -114,7 +120,9 @@ footer a:hover {
     grid-template-columns: 1fr;
   }
 
-  .sidebar {
+  .sidebar,
+  .qr-grid,
+  .qr-wrap {
     width: 100%;
     max-width: 100%;
   }
@@ -132,11 +140,6 @@ footer a:hover {
     justify-content: center;
     gap: 2.5rem;
   }
-
-  .qr-grid {
-    width: 100%;
-    max-width: 100%;
-  }
 }
 
 @media print {
@@ -150,11 +153,17 @@ footer a:hover {
     gap: 0;
   }
 
+  .grid-wrap {
+    padding: 0;
+    width: 100%;
+  }
+
   .qr-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, var(--qr-size));
     grid-auto-rows: calc(var(--qr-size) * 7 / 5);
     align-content: start;
+    justify-content: center;
     margin: 0 auto;
   }
 
