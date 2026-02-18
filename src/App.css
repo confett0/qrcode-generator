@@ -41,7 +41,6 @@ fieldset {
   border: none;
 }
 
-
 button {
   justify-content: center;
   gap: 0.5rem;
@@ -124,7 +123,6 @@ footer a:hover {
 }
 
 @media print {
-
   @page {
     size: A4;
     margin: 10mm;
@@ -138,7 +136,7 @@ footer a:hover {
   .qr-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, var(--qr-size));
-    grid-auto-rows: calc(var(--qr-size) * 7/5);
+    grid-auto-rows: calc(var(--qr-size) * 7 / 5);
     align-content: start;
   }
 
@@ -148,7 +146,6 @@ footer a:hover {
     padding: 2mm;
     break-inside: avoid;
   }
-
 
   .sidebar,
   footer {
