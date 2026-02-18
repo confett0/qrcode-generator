@@ -92,7 +92,7 @@ button {
   gap: 0.1rem;
   padding: 0.6rem;
   aspect-ratio: 5 / 7;
-  max-width: 100%;
+  max-width: clamp(50px, calc((800px - 40px) / var(--column-num)), 200px);
 }
 
 .qr-code-card svg {
