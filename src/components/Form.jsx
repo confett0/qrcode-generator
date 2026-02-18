@@ -24,8 +24,8 @@ export default function Form({
             type="radio"
             id="20mm"
             name="qr-size"
-            value={25}
-            checked={qrSize === 25}
+            value={26}
+            checked={qrSize === 26}
             onChange={handleChange}
           />
           20mm
@@ -33,13 +33,13 @@ export default function Form({
         <label>
           <input
             type="radio"
-            id="40mm"
+            id="35mm"
             name="qr-size"
-            value={45}
-            checked={qrSize === 45}
+            value={40}
+            checked={qrSize === 40}
             onChange={handleChange}
           />
-          40mm
+          35mm
         </label>
       </fieldset>
       <button type="submit">

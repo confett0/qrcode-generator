@@ -8,7 +8,7 @@ import "./App.css";
 function App() {
   const [input, setInput] = useState("");
   const [codeArray, setCodeArray] = useState([]);
-  const [qrSize, setQrSize] = useState(25); // mm
+  const [qrSize, setQrSize] = useState(26); // mm
 
   const generateQR = (e) => {
     e.preventDefault();
