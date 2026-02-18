@@ -12,19 +12,20 @@
   margin: 0 auto;
   padding: 0 2rem;
   text-align: center;
-  width: 100%;
-  min-height: 100%;
+  width: 100vw;
+  min-height: 100wh;
 }
 
 .content {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
   gap: 4rem;
   padding: 2rem;
   width: min(1280px, 100%);
 }
 
 .sidebar {
-  max-width: 300px;
+  width: 350px;
 }
 
 form {
@@ -61,8 +62,10 @@ button {
   display: grid;
   gap: 0;
   grid-template-columns: repeat(var(--column-num), 1fr);
+  justify-content: center;
   padding: 1rem;
-  width: 100%;
+  width: 800px;
+  max-width: 800px;
 }
 
 .qr-code-card {
@@ -108,7 +111,7 @@ footer a:hover {
 
 @media (max-width: 768px) {
   .content {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
   .sidebar {
@@ -128,6 +131,11 @@ footer a:hover {
   .control-button-container {
     justify-content: center;
     gap: 2.5rem;
+  }
+
+  .qr-grid {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
