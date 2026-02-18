@@ -6,9 +6,9 @@ export default function Form({
   generateQR,
   qrSize,
   setQrSize,
+  title,
+  setTitle,
 }) {
-  const handleChange = (e) => setQrSize(+e.target.value);
-
   return (
     <form onSubmit={generateQR}>
       <textarea
@@ -26,7 +26,7 @@ export default function Form({
             name="qr-size"
             value={26}
             checked={qrSize === 26}
-            onChange={handleChange}
+            onChange={(e) => setQrSize(+e.target.value)}
           />
           20mm
         </label>
@@ -37,11 +37,21 @@ export default function Form({
             name="qr-size"
             value={40}
             checked={qrSize === 40}
-            onChange={handleChange}
+            onChange={(e) => setQrSize(+e.target.value)}
           />
           35mm
         </label>
       </fieldset>
+      <label>
+        Titolo pagina (opzionale)
+        <input
+          type="text"
+          name="title"
+          className="title-input"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
+      </label>
       <button type="submit">
         <IoQrCodeOutline aria-hidden />
         Genera QR

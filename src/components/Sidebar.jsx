@@ -9,6 +9,8 @@ export default function Sidebar({
   resetAll,
   qrSize,
   setQrSize,
+  title,
+  setTitle,
 }) {
   return (
     <div className="sidebar">
@@ -20,6 +22,8 @@ export default function Sidebar({
         generateQR={generateQR}
         qrSize={qrSize}
         setQrSize={setQrSize}
+        title={title}
+        setTitle={setTitle}
       />
       {codeArray.length > 0 && <ControlButtons resetAll={resetAll} />}
     </div>

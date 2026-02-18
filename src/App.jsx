@@ -9,6 +9,7 @@ function App() {
   const [input, setInput] = useState("");
   const [codeArray, setCodeArray] = useState([]);
   const [qrSize, setQrSize] = useState(26); // mm
+  const [title, setTitle] = useState("");
 
   const generateQR = (e) => {
     e.preventDefault();
@@ -31,8 +32,10 @@ function App() {
           resetAll={resetAll}
           qrSize={qrSize}
           setQrSize={setQrSize}
+          title={title}
+          setTitle={setTitle}
         />
-        <QRgrid codeArray={codeArray} qrSize={qrSize} />
+        <QRgrid codeArray={codeArray} qrSize={qrSize} title={title} />
       </div>
       <Footer />
     </>
