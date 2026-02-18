@@ -67,7 +67,6 @@ button {
 
 .qr-code-card {
   border: 2px solid #000;
-  font-size: 11px;
   font-weight: bold;
   padding: 0.6rem;
   aspect-ratio: 5 / 7;
@@ -80,6 +79,7 @@ button {
 }
 
 .qr-code-card p {
+  font-size: clamp(11px, calc(var(--qr-size) * 0.12), 16px);
   margin: 0.2rem 0.1rem 0.1rem;
   word-break: break-all;
 }
@@ -138,6 +138,7 @@ footer a:hover {
     grid-template-columns: repeat(auto-fill, var(--qr-size));
     grid-auto-rows: calc(var(--qr-size) * 7 / 5);
     align-content: start;
+    margin: auto;
   }
 
   .qr-code-card {
