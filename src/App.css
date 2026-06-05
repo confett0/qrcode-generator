@@ -78,10 +78,10 @@ button {
 
 .qr-grid {
   align-content: start;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 0;
-  grid-template-columns: repeat(var(--column-num), 1fr);
-  justify-content: center;
+  max-height: 100vh;
 }
 
 .qr-code-card {
@@ -92,7 +92,7 @@ button {
   gap: 0.1rem;
   padding: 0.6rem;
   aspect-ratio: 5 / 7;
-  max-width: clamp(50px, calc((800px - 40px) / var(--column-num)), 200px);
+  max-width: clamp(50px, calc(var(--qr-size) * 1.1), 200px);
 }
 
 .qr-code-card svg {
@@ -169,12 +169,10 @@ footer a:hover {
   }
 
   .qr-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, var(--qr-size));
-    grid-auto-rows: calc(var(--qr-size) * 7 / 5);
+    display: flex;
     align-content: start;
-    justify-content: center;
     margin: 0 auto;
+    flex-wrap: wrap;
   }
 
   .qr-code-card {
