@@ -28,18 +28,27 @@
   width: 350px;
 }
 
+.site-title {
+  margin-top: 0;
+}
+
 form {
   display: flex;
-  gap: 2rem;
   flex-direction: column;
 }
 
 textarea {
-  min-height: 15rem;
+  min-height: 12rem;
+  width: 100%;
 }
 
 fieldset {
   border: none;
+  margin-bottom: 1.5rem;
+}
+
+input#qr-size {
+  width: 100%;
 }
 
 .title-input {

@@ -10,37 +10,43 @@ export default function Form({
   const { qrSize, title, flexDirection, rowGap, columnGap } = gridSettings;
   return (
     <form onSubmit={generateQR}>
-      <textarea
-        name="input"
-        placeholder="O1-SSB-1-1-0-0"
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-      ></textarea>
-      <label htmlFor="qr-size">
-        Seleziona la dimensione di stampa dei QR code:
-      </label>
-      <div className="range-input-container">
+      <fieldset>
+        <label htmlFor="textarea">Inserisci un codice per riga</label>
+        <textarea
+          id="textarea"
+          name="input"
+          placeholder="O1-SSB-1-1-0-0"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        ></textarea>
+      </fieldset>
+      <fieldset>
+        <label htmlFor="qr-size">Seleziona la dimensione dei QR code:</label>
+        <div className="range-input-container">
+          <input
+            type="range"
+            id="qr-size"
+            name="qrSize"
+            value={qrSize}
+            min="25"
+            max="40"
+            step="5"
+            onChange={handleChange}
+          />
+          <output>{qrSize}mm</output>
+        </div>
+      </fieldset>
+      <fieldset>
+        <label htmlFor="title">Inserisci titolo pagina (opzionale)</label>
         <input
-          type="range"
-          id="qr-size"
-          name="qrSize"
-          value={qrSize}
-          min="25"
-          max="40"
-          step="5"
+          type="text"
+          id="title"
+          name="title"
+          className="title-input"
+          value={title}
           onChange={handleChange}
         />
-        <output>{qrSize}mm</output>
-      </div>
-      <label htmlFor="title">Inserisci titolo pagina (opzionale)</label>
-      <input
-        type="text"
-        id="title"
-        name="title"
-        className="title-input"
-        value={title}
-        onChange={handleChange}
-      />
+      </fieldset>
       <fieldset>
         <legend>Direzione</legend>
         <label htmlFor="direction-row">Orizzontale</label>

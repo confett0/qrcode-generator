@@ -12,8 +12,7 @@ export default function Sidebar({
 }) {
   return (
     <div className="sidebar">
-      <h1>QR Code Generator</h1>
-      <p>Inserisci un codice per riga e clicca Genera QR</p>
+      <h1 className="site-title">QR Code Generator</h1>
       <Form
         input={input}
         setInput={setInput}
