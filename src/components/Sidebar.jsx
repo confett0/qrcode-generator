@@ -7,10 +7,8 @@ export default function Sidebar({
   generateQR,
   codeArray,
   resetAll,
-  qrSize,
-  setQrSize,
-  title,
-  setTitle,
+  gridSettings,
+  handleChange,
 }) {
   return (
     <div className="sidebar">
@@ -20,10 +18,8 @@ export default function Sidebar({
         input={input}
         setInput={setInput}
         generateQR={generateQR}
-        qrSize={qrSize}
-        setQrSize={setQrSize}
-        title={title}
-        setTitle={setTitle}
+        gridSettings={gridSettings}
+        handleChange={handleChange}
       />
       {codeArray.length > 0 && <ControlButtons resetAll={resetAll} />}
     </div>

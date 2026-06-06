@@ -8,12 +8,27 @@ import "./App.css";
 function App() {
   const [input, setInput] = useState("");
   const [codeArray, setCodeArray] = useState([]);
-  const [qrSize, setQrSize] = useState(25); // mm
-  const [title, setTitle] = useState("");
+  const [gridSettings, setGridSettings] = useState({
+    qrSize: 25, // mm
+    rowGap: 0,
+    columnGap: 0,
+    flexDirection: "row",
+    title: "",
+  });
 
   const generateQR = (e) => {
     e.preventDefault();
     setCodeArray(inputParser(input));
+  };
+
+  const handleChange = (e) => {
+    setGridSettings((prev) => {
+      const { name, value } = e.target;
+      return {
+        ...prev,
+        [name]: value,
+      };
+    });
   };
 
   const resetAll = () => {
@@ -30,12 +45,10 @@ function App() {
           generateQR={generateQR}
           codeArray={codeArray}
           resetAll={resetAll}
-          qrSize={qrSize}
-          setQrSize={setQrSize}
-          title={title}
-          setTitle={setTitle}
+          gridSettings={gridSettings}
+          handleChange={handleChange}
         />
-        <QRgrid codeArray={codeArray} qrSize={qrSize} title={title} />
+        <QRgrid codeArray={codeArray} settings={gridSettings} />
       </div>
       <Footer />
     </>

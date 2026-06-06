@@ -4,11 +4,10 @@ export default function Form({
   input,
   setInput,
   generateQR,
-  qrSize,
-  setQrSize,
-  title,
-  setTitle,
+  gridSettings,
+  handleChange,
 }) {
+  const { qrSize, title } = gridSettings;
   return (
     <form onSubmit={generateQR}>
       <textarea
@@ -25,12 +24,12 @@ export default function Form({
           <input
             type="range"
             id="qr-size"
+            name="qrSize"
             value={qrSize}
             min="25"
             max="40"
             step="5"
-            name="sizes"
-            onChange={(e) => setQrSize(+e.target.value)}
+            onChange={handleChange}
           />
           <output>{qrSize}mm</output>
         </div>
@@ -42,7 +41,7 @@ export default function Form({
           name="title"
           className="title-input"
           value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          onChange={handleChange}
         />
       </label>
       <button type="submit">
