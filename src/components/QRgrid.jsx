@@ -13,8 +13,8 @@ export default function QRgrid({ codeArray, settings }) {
         className="qr-grid"
         style={{
           "--qr-size": `${qrSize}mm`,
-          rowGap: rowGap,
-          columnGap: columnGap,
+          rowGap: `${rowGap}rem`,
+          columnGap: `${columnGap}rem`,
           flexDirection: flexDirection,
         }}
       >
