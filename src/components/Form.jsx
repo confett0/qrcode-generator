@@ -36,7 +36,7 @@ export default function Form({
         </div>
       </fieldset>
       <label>
-        Titolo pagina (opzionale)
+        Inserisci titolo pagina (opzionale)
         <input
           type="text"
           name="title"
