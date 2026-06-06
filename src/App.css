@@ -146,6 +146,11 @@ footer a:hover {
     width: min(400px, 90vw);
   }
 
+  .range-input-container {
+    display: flex;
+    flex-direction: column;
+  }
+
   .control-button-container {
     justify-content: center;
     gap: 2.5rem;

@@ -18,29 +18,22 @@ export default function Form({
         onChange={(e) => setInput(e.target.value)}
       ></textarea>
       <fieldset>
-        <legend>Seleziona la dimensione di stampa dei QR code:</legend>
-        <label>
+        <label htmlFor="qr-size">
+          Seleziona la dimensione di stampa dei QR code:
+        </label>
+        <div className="range-input-container">
           <input
-            type="radio"
-            id="20mm"
-            name="qr-size"
-            value={26}
-            checked={qrSize === 26}
+            type="range"
+            id="qr-size"
+            value={qrSize}
+            min="25"
+            max="40"
+            step="5"
+            name="sizes"
             onChange={(e) => setQrSize(+e.target.value)}
           />
-          20mm
-        </label>
-        <label>
-          <input
-            type="radio"
-            id="35mm"
-            name="qr-size"
-            value={40}
-            checked={qrSize === 40}
-            onChange={(e) => setQrSize(+e.target.value)}
-          />
-          35mm
-        </label>
+          <output>{qrSize}mm</output>
+        </div>
       </fieldset>
       <label>
         Titolo pagina (opzionale)
