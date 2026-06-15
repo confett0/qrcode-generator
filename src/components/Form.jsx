@@ -1,5 +1,6 @@
 import { IoQrCodeOutline } from "react-icons/io5";
 import OptionalSettings from "./OptionalSettings";
+import { useState } from "react";
 
 export default function Form({
   input,
@@ -8,7 +9,9 @@ export default function Form({
   gridSettings,
   handleChange,
 }) {
+  const [showOptionalSettings, setShowOptionalSettings] = useState(false);
   const { qrSize } = gridSettings;
+  const toggleSettings = () => setShowOptionalSettings((prev) => !prev);
   return (
     <form onSubmit={generateQR}>
       <fieldset>
@@ -37,10 +40,15 @@ export default function Form({
           <output>{qrSize}mm</output>
         </div>
       </fieldset>
-      <OptionalSettings
-        gridSettings={gridSettings}
-        handleChange={handleChange}
-      />
+      <button type="button" onClick={toggleSettings}>
+        Altre impostazioni
+      </button>
+      {showOptionalSettings && (
+        <OptionalSettings
+          gridSettings={gridSettings}
+          handleChange={handleChange}
+        />
+      )}
       <button type="submit">
         <IoQrCodeOutline aria-hidden />
         Genera QR
