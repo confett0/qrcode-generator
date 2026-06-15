@@ -1,4 +1,5 @@
 import { IoQrCodeOutline } from "react-icons/io5";
+import { IoMdSettings, IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import OptionalSettings from "./OptionalSettings";
 import { useState } from "react";
 
@@ -40,8 +41,13 @@ export default function Form({
           <output>{qrSize}mm</output>
         </div>
       </fieldset>
-      <button type="button" onClick={toggleSettings}>
-        Altre impostazioni
+      <button
+        type="button"
+        className="settings-button"
+        onClick={toggleSettings}
+      >
+        <IoMdSettings aria-hidden /> Altre impostazioni
+        {showOptionalSettings ? <IoIosArrowUp /> : <IoIosArrowDown />}
       </button>
       {showOptionalSettings && (
         <OptionalSettings

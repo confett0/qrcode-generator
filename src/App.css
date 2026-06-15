@@ -89,6 +89,12 @@ button {
   align-items: center;
 }
 
+.settings-button {
+  background: transparent;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
 .control-button-container {
   display: flex;
   justify-content: space-between;
