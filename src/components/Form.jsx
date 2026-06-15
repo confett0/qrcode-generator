@@ -49,49 +49,61 @@ export default function Form({
       </fieldset>
       <fieldset>
         <legend>Direzione</legend>
-        <label htmlFor="direction-row">Orizzontale</label>
-        <input
-          type="radio"
-          name="flexDirection"
-          id="direction-row"
-          value="row"
-          checked={flexDirection === "row"}
-          onChange={handleChange}
-        />
-        <label htmlFor="direction-column">Verticale</label>
-        <input
-          type="radio"
-          name="flexDirection"
-          id="direction-column"
-          value="column"
-          checked={flexDirection === "column"}
-          onChange={handleChange}
-        />
+        <div className="direction-selector-container">
+          <div className="direction-input">
+            <label htmlFor="direction-row">Orizzontale</label>
+            <input
+              type="radio"
+              name="flexDirection"
+              id="direction-row"
+              value="row"
+              checked={flexDirection === "row"}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="direction-input">
+            <label htmlFor="direction-column">Verticale</label>
+            <input
+              type="radio"
+              name="flexDirection"
+              id="direction-column"
+              value="column"
+              checked={flexDirection === "column"}
+              onChange={handleChange}
+            />
+          </div>
+        </div>
       </fieldset>
       <fieldset>
         <legend>Gap</legend>
-        <label htmlFor="row-gap">Righe</label>
-        <input
-          type="range"
-          id="row-gap"
-          name="rowGap"
-          value={rowGap}
-          min="0"
-          max="3"
-          step="0.5"
-          onChange={handleChange}
-        />
-        <label htmlFor="column-gap">Colonne</label>
-        <input
-          type="range"
-          id="column-gap"
-          name="columnGap"
-          value={columnGap}
-          min="0"
-          max="3"
-          step="0.5"
-          onChange={handleChange}
-        />
+        <div className="gap-selector-container">
+          <div>
+            <label htmlFor="row-gap">Righe</label>
+            <input
+              type="range"
+              id="row-gap"
+              name="rowGap"
+              value={rowGap}
+              min="0"
+              max="3"
+              step="0.5"
+              onChange={handleChange}
+            />
+          </div>
+          <div>
+            <label htmlFor="column-gap">Colonne</label>
+            <input
+              type="range"
+              id="column-gap"
+              name="columnGap"
+              value={columnGap}
+              min="0"
+              max="3"
+              step="0.5"
+              onChange={handleChange}
+            />
+          </div>
+        </div>
       </fieldset>
       <button type="submit">
         <IoQrCodeOutline aria-hidden />

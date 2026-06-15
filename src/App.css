@@ -63,6 +63,25 @@ input#qr-size {
   margin-top: 0.4rem;
 }
 
+.gap-selector-container,
+.direction-selector-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.direction-selector-container {
+  justify-content: center;
+}
+
+.gap-selector-container input {
+  width: 100%;
+}
+
+.direction-input {
+  display: flex;
+  gap: 0.3rem;
+}
+
 button {
   justify-content: center;
   gap: 0.5rem;
