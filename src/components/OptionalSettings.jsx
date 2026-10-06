@@ -45,13 +45,24 @@ export default function OptionalSettings({ gridSettings, handleChange }) {
         <legend>Colore di sfondo</legend>
         <div className="background-selector-container">
           <div className="background-input">
+            <label htmlFor="background-orange">Bianco</label>
+            <input
+              type="radio"
+              name="backgroundColor"
+              id="background-white"
+              value="#fff"
+              checked={backgroundColor === "#fff"}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="background-input">
             <label htmlFor="background-yellow">Giallo</label>
             <input
               type="radio"
               name="backgroundColor"
               id="background-yellow"
-              value="yellow"
-              checked={backgroundColor === "yellow"}
+              value="#FFF44F"
+              checked={backgroundColor === "#FFF44F"}
               onChange={handleChange}
             />
           </div>
@@ -61,8 +72,8 @@ export default function OptionalSettings({ gridSettings, handleChange }) {
               type="radio"
               name="backgroundColor"
               id="background-orange"
-              value="orange"
-              checked={backgroundColor === "orange"}
+              value="#FF8000"
+              checked={backgroundColor === "#FF8000"}
               onChange={handleChange}
             />
           </div>
@@ -72,8 +83,8 @@ export default function OptionalSettings({ gridSettings, handleChange }) {
               type="radio"
               name="backgroundColor"
               id="background-red"
-              value="coral"
-              checked={backgroundColor === "coral"}
+              value="#FF3333"
+              checked={backgroundColor === "#FF3333"}
               onChange={handleChange}
             />
           </div>
@@ -83,8 +94,8 @@ export default function OptionalSettings({ gridSettings, handleChange }) {
               type="radio"
               name="backgroundColor"
               id="background-blue"
-              value="lightblue"
-              checked={backgroundColor === "lightblue"}
+              value="#90D5FF"
+              checked={backgroundColor === "#90D5FF"}
               onChange={handleChange}
             />
           </div>
@@ -94,19 +105,8 @@ export default function OptionalSettings({ gridSettings, handleChange }) {
               type="radio"
               name="backgroundColor"
               id="background-green"
-              value="lightgreen"
-              checked={backgroundColor === "lightgreen"}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="background-input">
-            <label htmlFor="background-orange">Bianco</label>
-            <input
-              type="radio"
-              name="backgroundColor"
-              id="background-white"
-              value="white"
-              checked={backgroundColor === "white"}
+              value="#88E788"
+              checked={backgroundColor === "#88E788"}
               onChange={handleChange}
             />
           </div>

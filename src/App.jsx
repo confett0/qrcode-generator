@@ -14,7 +14,7 @@ function App() {
     columnGap: 0,
     flexDirection: "row",
     title: "",
-    backgroundColor: "white",
+    backgroundColor: "#fff",
   });
 
   const generateQR = (e) => {
