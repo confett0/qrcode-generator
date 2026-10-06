@@ -3,19 +3,13 @@ import Sidebar from "./components/Sidebar";
 import QRgrid from "./components/QRgrid";
 import Footer from "./components/Footer";
 import inputParser from "./inputParser";
+import INITIAL_SETTINGS from "./initialSettings";
 import "./App.css";
 
 function App() {
   const [input, setInput] = useState("");
   const [codeArray, setCodeArray] = useState([]);
-  const [gridSettings, setGridSettings] = useState({
-    qrSize: 25, // mm
-    rowGap: 0,
-    columnGap: 0,
-    flexDirection: "row",
-    title: "",
-    backgroundColor: "#fff",
-  });
+  const [gridSettings, setGridSettings] = useState(INITIAL_SETTINGS);
 
   const generateQR = (e) => {
     e.preventDefault();
@@ -35,6 +29,7 @@ function App() {
   const resetAll = () => {
     setInput("");
     setCodeArray([]);
+    setGridSettings(INITIAL_SETTINGS);
   };
 
   return (
