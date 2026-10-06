@@ -64,20 +64,24 @@ input#qr-size {
 }
 
 .gap-selector-container,
-.direction-selector-container {
+.direction-selector-container,
+.background-selector-container {
   display: flex;
   gap: 1rem;
 }
 
-.direction-selector-container {
+.direction-selector-container,
+.background-selector-container {
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .gap-selector-container input {
   width: 100%;
 }
 
-.direction-input {
+.direction-input,
+.background-input {
   display: flex;
   gap: 0.3rem;
 }
@@ -225,6 +229,8 @@ footer a:hover {
     aspect-ratio: 5/7;
     padding: 2mm;
     break-inside: avoid;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
   }
 
   .sidebar,

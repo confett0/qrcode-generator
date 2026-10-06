@@ -1,5 +1,6 @@
 export default function OptionalSettings({ gridSettings, handleChange }) {
-  const { title, flexDirection, rowGap, columnGap } = gridSettings;
+  const { title, flexDirection, rowGap, columnGap, backgroundColor } =
+    gridSettings;
   return (
     <div className="optional-settings">
       <fieldset>
@@ -35,6 +36,77 @@ export default function OptionalSettings({ gridSettings, handleChange }) {
               id="direction-column"
               value="column"
               checked={flexDirection === "column"}
+              onChange={handleChange}
+            />
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Colore di sfondo</legend>
+        <div className="background-selector-container">
+          <div className="background-input">
+            <label htmlFor="background-yellow">Giallo</label>
+            <input
+              type="radio"
+              name="backgroundColor"
+              id="background-yellow"
+              value="yellow"
+              checked={backgroundColor === "yellow"}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="background-input">
+            <label htmlFor="background-orange">Arancione</label>
+            <input
+              type="radio"
+              name="backgroundColor"
+              id="background-orange"
+              value="orange"
+              checked={backgroundColor === "orange"}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="background-input">
+            <label htmlFor="background-red">Rosso</label>
+            <input
+              type="radio"
+              name="backgroundColor"
+              id="background-red"
+              value="coral"
+              checked={backgroundColor === "coral"}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="background-input">
+            <label htmlFor="background-blue">Azzurro</label>
+            <input
+              type="radio"
+              name="backgroundColor"
+              id="background-blue"
+              value="lightblue"
+              checked={backgroundColor === "lightblue"}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="background-input">
+            <label htmlFor="background-orange">Verde</label>
+            <input
+              type="radio"
+              name="backgroundColor"
+              id="background-green"
+              value="lightgreen"
+              checked={backgroundColor === "lightgreen"}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="background-input">
+            <label htmlFor="background-orange">Bianco</label>
+            <input
+              type="radio"
+              name="backgroundColor"
+              id="background-white"
+              value="white"
+              checked={backgroundColor === "white"}
               onChange={handleChange}
             />
           </div>

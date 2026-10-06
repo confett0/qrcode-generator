@@ -1,9 +1,14 @@
 import QRCodeCard from "./QRCodeCard";
 
 export default function QRgrid({ codeArray, settings }) {
-  const { qrSize, rowGap, columnGap, flexDirection, title } = settings;
+  const { qrSize, rowGap, columnGap, flexDirection, title, backgroundColor } =
+    settings;
   const qrCodeElements = codeArray.map((code, index) => (
-    <QRCodeCard key={`${code}-${index}`} code={code} />
+    <QRCodeCard
+      key={`${code}-${index}`}
+      code={code}
+      backgroundColor={backgroundColor}
+    />
   ));
 
   return (
